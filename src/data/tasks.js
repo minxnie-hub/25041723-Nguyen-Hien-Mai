@@ -1,0 +1,75 @@
+export const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
+export const tasks = [
+  {
+    id: 1,
+    title: "Thao tác cơ bản với tệp tin và thư mục",
+    shortTitle: "Tệp tin & thư mục",
+    summary: "Tạo, đổi tên, sao chép, di chuyển, xóa và khôi phục tệp trên Windows.",
+    note: "Từ thao tác nhỏ đến một hệ thống lưu trữ dễ tìm.",
+    pages: 7,
+    tone: "rose",
+    cover: "evidence/task1/page-7.png",
+    pdf: "docs/bai-1.pdf",
+  },
+  {
+    id: 2,
+    title: "Tìm kiếm và đánh giá thông tin học thuật",
+    shortTitle: "Quản lý thời gian",
+    summary: "Nghiên cứu ảnh hưởng của kỹ năng quản lý thời gian đến hành vi trì hoãn học tập.",
+    note: "Nguồn tin được đọc, so sánh và đánh giá trước khi kết luận.",
+    pages: 4,
+    tone: "butter",
+    cover: "evidence/task2/page-1.png",
+    pdf: "docs/bai-2.pdf",
+  },
+  {
+    id: 3,
+    title: "Viết prompt hiệu quả cho các tác vụ học tập",
+    shortTitle: "Prompt hiệu quả",
+    summary: "Thử nghiệm ba mức prompt cho tóm tắt, giải thích khái niệm và tạo câu hỏi ôn tập.",
+    note: "Prompt càng rõ thì đầu ra càng đúng mục tiêu.",
+    pages: 6,
+    tone: "lilac",
+    cover: "evidence/task3/page-5.png",
+    pdf: "docs/bai-3.pdf",
+  },
+  {
+    id: 4,
+    title: "Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm",
+    shortTitle: "Hợp tác trực tuyến",
+    summary: "Phối hợp bằng Trello, Google Docs và Google Drive trong dự án về AI và hiệu suất học tập.",
+    note: "Rõ việc, rõ tài liệu, rõ trách nhiệm.",
+    pages: 7,
+    tone: "cocoa",
+    cover: "evidence/task4/page-1.png",
+    pdf: "docs/bai-4.pdf",
+  },
+  {
+    id: 5,
+    title: "Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung",
+    shortTitle: "AI & tiếng Trung",
+    summary: "Kết hợp ChatGPT, Gemini và Canva AI để viết bài về cách AI hỗ trợ học tiếng Trung.",
+    note: "AI tạo bản nháp, người học chọn lọc và hoàn thiện.",
+    pages: 5,
+    tone: "plum",
+    cover: "evidence/task5-ref/page-5.png",
+    pdf: "docs/bai-5.pdf",
+    evidencePdf: "docs/bai-5-minh-chung.pdf",
+  },
+  {
+    id: 6,
+    title: "Sử dụng AI có trách nhiệm trong học tập và nghiên cứu",
+    shortTitle: "AI có trách nhiệm",
+    summary: "Phân tích ranh giới hỗ trợ, gian lận, minh bạch và trách nhiệm học thuật khi dùng AI.",
+    note: "AI hỗ trợ bạn học, không học thay bạn.",
+    pages: 5,
+    tone: "berry",
+    cover: "evidence/task6/page-1.png",
+    pdf: "docs/bai-6.pdf",
+  },
+];
+
+export function getTask(id) {
+  return tasks.find((task) => task.id === Number(id));
+}
