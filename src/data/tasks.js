@@ -14,8 +14,9 @@ export const tasks = [
   },
   {
     id: 2,
-    title: "Tìm kiếm và đánh giá thông tin học thuật",
-    shortTitle: "Quản lý thời gian",
+    title: "Tìm kiếm thông tin",
+    subtitle: "Tìm kiếm và đánh giá thông tin học thuật",
+    shortTitle: "Tìm kiếm thông tin",
     summary: "Nghiên cứu ảnh hưởng của kỹ năng quản lý thời gian đến hành vi trì hoãn học tập.",
     note: "Nguồn tin được đọc, so sánh và đánh giá trước khi kết luận.",
     pages: 4,

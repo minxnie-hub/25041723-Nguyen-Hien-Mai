@@ -1209,6 +1209,23 @@ li {
   line-height: 1.8;
 }
 
+.task-hero-copy > .task-hero-subtitle {
+  max-width: none;
+  margin: 0 0 16px;
+  color: var(--rose-deep);
+  font-family: var(--hand);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.task-hero-copy > .task-hero-summary {
+  max-width: 58ch;
+  margin-bottom: 28px;
+}
+
 .task-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1505,6 +1522,231 @@ li {
   margin-bottom: 0;
   color: var(--muted);
   line-height: 1.72;
+}
+
+/* Bài 2: phần mở đầu được trình bày như một research brief, không lặp lại hệ card chung. */
+.task-two-brief-section {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.task-two-brief-section::before {
+  display: none;
+}
+
+.task-two-brief-section > h2 {
+  margin-bottom: 34px;
+}
+
+.research-brief {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.research-objectives,
+.research-topic-card {
+  position: relative;
+  min-height: 470px;
+  padding: clamp(28px, 4vw, 46px);
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+}
+
+.research-objectives {
+  display: flex;
+  flex-direction: column;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--butter-soft) 88%, transparent), transparent 68%),
+    var(--paper);
+  box-shadow: 7px 7px 0 var(--butter);
+}
+
+.research-objectives::after {
+  content: "检索";
+  position: absolute;
+  right: -7px;
+  bottom: -36px;
+  color: color-mix(in srgb, var(--butter) 46%, transparent);
+  font-family: var(--chinese);
+  font-size: clamp(7rem, 13vw, 10rem);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.research-topic-card {
+  background:
+    linear-gradient(160deg, color-mix(in srgb, var(--lilac-soft) 92%, transparent), transparent 66%),
+    var(--paper);
+  box-shadow: 7px 7px 0 var(--lilac);
+}
+
+.research-topic-card::before {
+  content: "";
+  position: absolute;
+  width: 96px;
+  height: 22px;
+  top: -10px;
+  right: 42px;
+  background: var(--rose);
+  opacity: 0.75;
+  transform: rotate(2deg);
+}
+
+.research-brief-label {
+  margin: 0 0 22px;
+  color: var(--rose-deep);
+  font-family: var(--hand);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.research-objectives h3,
+.research-topic-card h3 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.research-objectives .report-list {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+}
+
+.research-objectives .report-list li {
+  color: var(--ink);
+}
+
+.research-topic-heading {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.research-topic-heading > span {
+  padding: 7px 10px 6px;
+  border: 1px solid var(--line-strong);
+  color: var(--cocoa-deep);
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
+  font-family: var(--hand);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  transform: rotate(1deg);
+}
+
+.research-topic-intro {
+  max-width: 58ch;
+  margin: 0 0 28px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.research-reasons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+.research-reasons li {
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: start;
+  border-bottom: 1px dashed var(--line-strong);
+}
+
+.research-reasons li:last-child {
+  border-bottom: 0;
+}
+
+.research-reasons span {
+  color: var(--rose-deep);
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.research-reasons p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.62;
+}
+
+.learning-reflection-section {
+  padding-bottom: 0;
+  border-top: 0;
+}
+
+.learning-reflection-section::before {
+  display: none;
+}
+
+.learning-reflection {
+  position: relative;
+  padding: clamp(30px, 5vw, 58px);
+  border: 1px solid var(--line-strong);
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 31px, color-mix(in srgb, var(--line) 45%, transparent) 32px),
+    var(--butter-soft);
+  box-shadow: 8px 8px 0 var(--rose-soft);
+}
+
+.learning-reflection::before {
+  content: "";
+  position: absolute;
+  width: 102px;
+  height: 23px;
+  top: -12px;
+  left: 50%;
+  background: var(--lilac);
+  opacity: 0.8;
+  transform: translateX(-50%) rotate(-1deg);
+}
+
+.learning-reflection-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.learning-reflection-tags span {
+  padding: 7px 12px 6px;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  color: var(--cocoa-deep);
+  font-family: var(--hand);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.learning-reflection p {
+  max-width: 78ch;
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(1.18rem, 2.2vw, 1.72rem);
+  line-height: 1.62;
+}
+
+.learning-reflection strong {
+  color: var(--rose-deep);
+  font-weight: 600;
 }
 
 .finding-layout {
@@ -2327,8 +2569,14 @@ tbody tr:last-child td {
   .prompt-ladder,
   .tool-row,
   .evaluation-grid,
-  .creative-flow {
+  .creative-flow,
+  .research-brief {
     grid-template-columns: 1fr;
+  }
+
+  .research-objectives,
+  .research-topic-card {
+    min-height: auto;
   }
 
   .prompt-card,
@@ -2538,6 +2786,28 @@ tbody tr:last-child td {
 
   .report-section h2 {
     font-size: clamp(2.2rem, 12vw, 3.3rem);
+  }
+
+  .research-objectives,
+  .research-topic-card {
+    padding: 26px 22px;
+  }
+
+  .research-topic-heading {
+    display: block;
+  }
+
+  .research-topic-heading > span {
+    display: inline-block;
+    margin-bottom: 18px;
+  }
+
+  .learning-reflection {
+    padding: 34px 22px 28px;
+  }
+
+  .learning-reflection p {
+    font-size: 1.08rem;
   }
 
   .step-list {

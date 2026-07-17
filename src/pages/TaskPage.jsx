@@ -105,6 +105,36 @@ function TaskOneContent() {
 function TaskTwoContent() {
   return (
     <>
+      <Section title="Mục tiêu và chủ đề" className="wide-section task-two-brief-section">
+        <div className="research-brief">
+          <article className="research-objectives">
+            <p className="research-brief-label">01 · Mục tiêu bài tập</p>
+            <h3>Tìm đúng, đọc kỹ và lựa chọn có căn cứ</h3>
+            <BulletList
+              items={[
+                "Thực hành tìm kiếm thông tin học thuật.",
+                "Đánh giá độ tin cậy của các nguồn tài liệu.",
+                "Rèn luyện kỹ năng lựa chọn và sử dụng nguồn học thuật trong học tập.",
+              ]}
+            />
+          </article>
+
+          <article className="research-topic-card">
+            <div className="research-topic-heading">
+              <p className="research-brief-label">02 · Chủ đề lựa chọn</p>
+              <span>Time Management</span>
+            </div>
+            <h3>Quản lý thời gian</h3>
+            <p className="research-topic-intro">Chủ đề được chọn vì gần với trải nghiệm học tập hằng ngày của sinh viên và có đủ cơ sở học thuật để tìm hiểu sâu hơn.</p>
+            <ol className="research-reasons">
+              <li><span>01</span><p>Là kỹ năng cần thiết đối với sinh viên.</p></li>
+              <li><span>02</span><p>Có nhiều tài liệu nghiên cứu học thuật.</p></li>
+              <li><span>03</span><p>Phù hợp với nhu cầu học tập và phát triển bản thân.</p></li>
+            </ol>
+          </article>
+        </div>
+      </Section>
+
       <Section title="Vấn đề nghiên cứu">
         <p>
           Báo cáo phân tích ảnh hưởng của kỹ năng quản lý thời gian đến hành vi trì hoãn học tập của sinh viên. Trì hoãn được xem là một thất bại trong khả năng tự điều chỉnh hành vi, không chỉ là vấn đề ý thức cá nhân.
@@ -189,10 +219,22 @@ function TaskTwoContent() {
           <li>Zhang, R. et al. (2025). <i>Procrastination learning through games</i>. arXiv.</li>
         </ol>
       </Section>
-      <Section title="Kết luận">
+      <Section title="Kết luận nghiên cứu">
         <p>
           Các bằng chứng được tổng hợp cho thấy kỹ năng quản lý thời gian có vai trò quan trọng trong việc kiểm soát hành vi trì hoãn. Lập kế hoạch, theo dõi tiến độ và tự kiểm soát là những kỹ năng cần được rèn luyện trong môi trường đại học.
         </p>
+      </Section>
+      <Section title="Điều rút ra từ bài tập" className="wide-section learning-reflection-section">
+        <div className="learning-reflection">
+          <div className="learning-reflection-tags" aria-label="Ba kỹ năng được rèn luyện">
+            <span>Tìm kiếm</span>
+            <span>Chọn lọc</span>
+            <span>Đánh giá</span>
+          </div>
+          <p>
+            Bài tập giúp rèn luyện kỹ năng tìm kiếm, chọn lọc và đánh giá thông tin học thuật thông qua chủ đề <strong>Quản lý thời gian</strong>. Việc sử dụng các công cụ tìm kiếm học thuật và áp dụng các tiêu chí đánh giá giúp lựa chọn được những nguồn tài liệu đáng tin cậy, phục vụ hiệu quả cho học tập và nghiên cứu.
+          </p>
+        </div>
       </Section>
     </>
   );
@@ -553,8 +595,9 @@ export default function TaskPage() {
         <header className="task-hero">
           <div className="task-hero-copy">
             <span className="task-hero-number">{String(task.id).padStart(2, "0")}</span>
+            {task.subtitle && <p className="task-hero-subtitle">{task.subtitle}</p>}
             <h1>{task.title}</h1>
-            <p>{task.summary}</p>
+            <p className="task-hero-summary">{task.summary}</p>
             <div className="task-meta">
               <span>{task.pages} trang tài liệu</span>
               <span>Có minh chứng gốc</span>
