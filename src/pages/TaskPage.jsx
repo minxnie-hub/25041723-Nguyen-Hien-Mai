@@ -4,7 +4,6 @@ import {
   Check,
   FilePdf,
   Folder,
-  Lightbulb,
   LinkSimple,
   MagnifyingGlass,
   ShieldCheck,
@@ -166,11 +165,29 @@ function TaskTwoContent() {
               <tr><td>Frontiers in Education (2025)</td><td>Review</td><td>5/5</td><td>Tổng hợp nhiều nghiên cứu</td></tr>
               <tr><td>Current Psychology (2023)</td><td>Bài báo</td><td>5/5</td><td>Phương pháp rõ ràng</td></tr>
               <tr><td>MDPI Children (2023)</td><td>Review</td><td>4/5</td><td>Open access, đáng tin</td></tr>
+              <tr><td>Journal of Social Sciences (2021)</td><td>Bài báo</td><td>4/5</td><td>Có phân tích thống kê</td></tr>
+              <tr><td>BICC Proceedings</td><td>Hội thảo</td><td>3/5</td><td>Độ tin cậy trung bình</td></tr>
               <tr><td>arXiv (2025)</td><td>Preprint</td><td>3/5</td><td>Chưa phản biện</td></tr>
               <tr><td>Wikipedia</td><td>Nguồn mở</td><td>2/5</td><td>Chỉ dùng để tham khảo</td></tr>
+              <tr><td>Pomodoro Technique</td><td>Nguồn mở</td><td>2/5</td><td>Không phải nguồn học thuật</td></tr>
+              <tr><td>Springer Study</td><td>Bài báo</td><td>5/5</td><td>Uy tín cao</td></tr>
             </tbody>
           </table>
         </div>
+      </Section>
+      <Section title="Danh mục tài liệu tham khảo">
+        <ol className="reference-list">
+          <li>Codina, N. et al. (2024). <i>Time perspectives and procrastination in university students</i>. BMC Psychology.</li>
+          <li>Patzak, A., Zhang, X. &amp; Vytasek, J. (2025). <i>Boosting productivity through time management</i>. Frontiers in Education.</li>
+          <li>García-Ros, R. et al. (2023). <i>Self-regulated learning and procrastination</i>. Current Psychology.</li>
+          <li>González-Brignardello, M. (2023). <i>Academic procrastination in children and adolescents</i>. Children.</li>
+          <li>Arıbaş, A.N. (2021). <i>Time management and academic procrastination</i>. Journal of Social Sciences.</li>
+          <li>Fu, Y. et al. (2025). <i>Time management and student engagement</i>. BMC Psychology.</li>
+          <li>Saputri, M. et al. (2024). <i>Time management and procrastination</i>. BICC Proceedings.</li>
+          <li>Steel, P. &amp; König, C. (2006). <i>Temporal Motivation Theory</i>.</li>
+          <li>Cirillo, F. (1980s). <i>Pomodoro Technique</i>.</li>
+          <li>Zhang, R. et al. (2025). <i>Procrastination learning through games</i>. arXiv.</li>
+        </ol>
       </Section>
       <Section title="Kết luận">
         <p>
@@ -227,7 +244,8 @@ function TaskThreeContent() {
               <tr><td>Mức độ chi tiết</td><td>Ít</td><td>Trung bình</td><td>Cao</td></tr>
               <tr><td>Chất lượng phản hồi</td><td>Chung chung</td><td>Phù hợp hơn</td><td>Chính xác và sâu</td></tr>
               <tr><td>Tính cá nhân hóa</td><td>Gần như không có</td><td>Có một phần</td><td>Rất tốt</td></tr>
-              <tr><td>Khả năng kiểm soát</td><td>Thấp</td><td>Trung bình</td><td>Cao</td></tr>
+              <tr><td>Khả năng kiểm soát đầu ra</td><td>Thấp</td><td>Trung bình</td><td>Cao</td></tr>
+              <tr><td>Cấu trúc câu trả lời</td><td>Đơn giản</td><td>Logic hơn</td><td>Có hệ thống</td></tr>
               <tr><td>Hiệu quả học tập</td><td>Chưa tối ưu</td><td>Tốt</td><td>Tốt nhất</td></tr>
             </tbody>
           </table>
@@ -236,8 +254,9 @@ function TaskThreeContent() {
       <Section title="Nguyên tắc rút ra">
         <BulletList
           items={[
-            "Xác định rõ mục tiêu và đối tượng người học.",
-            "Yêu cầu cấu trúc đầu ra cụ thể.",
+            "Xác định rõ mục tiêu của yêu cầu.",
+            "Chỉ rõ đối tượng người học để AI điều chỉnh cách diễn đạt.",
+            "Yêu cầu cấu trúc đầu ra cụ thể và dễ kiểm tra.",
             "Sử dụng role prompting khi vai trò giúp định hình câu trả lời.",
             "Chia nhiệm vụ thành từng bước và đặt giới hạn cần thiết.",
           ]}
@@ -279,7 +298,7 @@ function TaskFourContent() {
           ]}
         />
         <p>
-          Mỗi nhiệm vụ có mô tả, checklist và thời hạn cụ thể. Trạng thái công việc được cập nhật từ To Do sang Doing rồi Done để cả nhóm theo dõi.
+          Mỗi nhiệm vụ có mô tả, checklist và thời hạn cụ thể. Trạng thái công việc được cập nhật từ To Do sang Doing rồi Done khoảng 3-4 lần mỗi tuần để cả nhóm theo dõi.
         </p>
       </Section>
       <Section title="Cách tổ chức tài nguyên">
@@ -357,10 +376,16 @@ function TaskFiveContent() {
           </p>
         </div>
         <p>
-          AI còn có thể đóng vai người bản ngữ để mô phỏng hội thoại về giới thiệu bản thân, hỏi đường, mua sắm hoặc sở thích. Khi luyện viết, AI hỗ trợ kiểm tra ngữ pháp, cách dùng từ và gợi ý diễn đạt tự nhiên hơn, đồng thời giải thích nguyên nhân để tránh lặp lại lỗi.
+          AI còn có thể đóng vai người bản ngữ để mô phỏng hội thoại về giới thiệu bản thân, hỏi đường, mua sắm hoặc sở thích. Nhờ đó, Mai có thêm cơ hội thực hành ngay cả khi chưa có môi trường giao tiếp thực tế.
         </p>
         <p>
-          Dù vậy, câu trả lời của AI có thể chưa hoàn toàn chính xác hoặc chưa phù hợp với trình độ người học. Nếu phụ thuộc quá mức, người học có thể giảm khả năng tự nghiên cứu. Vì vậy, AI cần được kết hợp với sách, giáo viên và sự chủ động của chính người học.
+          Khi luyện viết, AI hỗ trợ kiểm tra ngữ pháp, cách dùng từ và gợi ý diễn đạt tự nhiên hơn, đồng thời giải thích nguyên nhân để tránh lặp lại lỗi. Gemini được dùng để tạo hình minh họa, còn Canva AI hỗ trợ thiết kế infographic tóm tắt các ứng dụng của AI trong học tập.
+        </p>
+        <p>
+          Dù vậy, câu trả lời của AI có thể chưa hoàn toàn chính xác hoặc chưa phù hợp với trình độ người học. Nếu phụ thuộc quá mức, người học có thể giảm khả năng tự nghiên cứu và tư duy độc lập. Vì vậy, AI cần được kết hợp với sách, giáo viên và sự chủ động của chính người học.
+        </p>
+        <p>
+          Tóm lại, AI đã mang lại nhiều thay đổi tích cực trong quá trình học tiếng Trung: từ học từ vựng, ngữ pháp, luyện hội thoại đến sửa lỗi viết. AI là một trợ lý hữu ích, nhưng hiệu quả lâu dài vẫn phụ thuộc vào việc người học tự luyện tập, kiểm chứng và chịu trách nhiệm với sản phẩm cuối cùng.
         </p>
       </Section>
       <Section title="Vai trò của người học">
@@ -421,6 +446,15 @@ function TaskSixContent() {
           </article>
         </div>
         <blockquote>Ranh giới quan trọng nằm ở việc AI hỗ trợ tư duy hay thay thế tư duy của người học.</blockquote>
+      </Section>
+      <Section title="Quyền sở hữu trí tuệ và trích dẫn">
+        <p>
+          AI không được xem là tác giả hợp pháp của nội dung. Người sử dụng vẫn chịu trách nhiệm học thuật, cần khai báo mức độ hỗ trợ của AI và tránh tạo hiểu lầm về nguồn gốc ý tưởng.
+        </p>
+        <div className="report-callout">
+          <LinkSimple aria-hidden="true" />
+          <p>Trong bài, ChatGPT được ghi nhận là công cụ hỗ trợ xây dựng dàn ý; toàn bộ nội dung cuối cùng đã được người thực hiện đánh giá, chỉnh sửa và chịu trách nhiệm.</p>
+        </div>
       </Section>
       <Section title="Tác động đến quá trình học">
         <div className="compare-pair">
@@ -485,8 +519,8 @@ function EvidenceGallery({ task }) {
   return (
     <section className="evidence-section" aria-labelledby="evidence-title">
       <div className="evidence-heading">
-        <h2 id="evidence-title">Minh chứng gốc</h2>
-        <p>Kéo ngang để xem các trang. Nhấp vào ảnh để mở kích thước lớn.</p>
+        <h2 id="evidence-title">Tài liệu và minh chứng</h2>
+        <p>Các trang được giữ nguyên để đối chiếu với phần trình bày trên web. Kéo ngang và nhấp vào ảnh để xem rõ hơn.</p>
       </div>
       {renderStrip(images)}
       {supporting.length > 0 && (

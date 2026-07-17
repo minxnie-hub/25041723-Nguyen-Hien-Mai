@@ -1,21 +1,20 @@
 import { List, MoonStars, Sun, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const navItems = [
   { label: "Hồ sơ", anchor: "about" },
-  { label: "6 bài tập", anchor: "projects" },
+  { label: "Sáu bài", anchor: "projects" },
   { label: "Tổng kết", anchor: "summary" },
 ];
 
 function getInitialTheme() {
   const saved = window.localStorage.getItem("mai-theme");
   if (saved === "light" || saved === "dark") return saved;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return "light";
 }
 
 export default function SiteHeader({ compact = false }) {
-  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState(getInitialTheme);
 
@@ -24,18 +23,20 @@ export default function SiteHeader({ compact = false }) {
     window.localStorage.setItem("mai-theme", theme);
   }, [theme]);
 
-  useEffect(() => setMenuOpen(false), [location.pathname]);
 
   return (
     <header className={`site-header ${compact ? "site-header-compact" : ""}`}>
       <Link className="brand-mark" to="/" aria-label="Về trang chủ của Nguyễn Hiền Mai">
         <span className="brand-monogram">HM</span>
-        <span>Hiền Mai</span>
+        <span>
+          Hiền Mai
+          <small>portfolio học tập</small>
+        </span>
       </Link>
 
       <nav className={`main-nav ${menuOpen ? "is-open" : ""}`} aria-label="Điều hướng chính">
         {navItems.map((item) => (
-          <Link key={item.anchor} to="/" state={{ anchor: item.anchor }}>
+          <Link key={item.anchor} to="/" state={{ anchor: item.anchor }} onClick={() => setMenuOpen(false)}>
             {item.label}
           </Link>
         ))}

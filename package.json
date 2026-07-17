@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fontsource/be-vietnam-pro": "^5.2.8",
+    "@fontsource/fraunces": "^5.2.9",
     "@fontsource/mali": "^5.2.8",
     "@fontsource/noto-sans-sc": "^5.2.9",
     "@phosphor-icons/react": "^2.1.10",
