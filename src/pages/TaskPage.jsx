@@ -614,7 +614,9 @@ export default function TaskPage() {
             </div>
           </div>
           <figure className="task-hero-visual">
-            <img src={asset(task.cover)} alt={`Trang minh chứng tiêu biểu của bài ${task.id}`} width="910" height="1287" />
+            <div className="task-hero-image-frame">
+              <img src={asset(task.cover)} alt={`Trang minh chứng tiêu biểu của bài ${task.id}`} />
+            </div>
             <figcaption>{task.note}</figcaption>
           </figure>
         </header>

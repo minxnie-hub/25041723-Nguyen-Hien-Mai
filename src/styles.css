@@ -1258,9 +1258,14 @@ li {
   gap: 14px;
 }
 
+.task-hero > * {
+  min-width: 0;
+}
+
 .task-hero-visual {
   position: relative;
   width: min(100%, 380px);
+  min-width: 0;
   margin: 0 auto;
   padding: 12px 12px 46px;
   border: 1px solid var(--line);
@@ -1281,12 +1286,23 @@ li {
   opacity: 0.82;
 }
 
-.task-hero-visual img {
+.task-hero-image-frame {
+  position: relative;
   width: 100%;
+  min-width: 0;
   aspect-ratio: 910 / 1287;
-  object-fit: cover;
-  object-position: top center;
+  overflow: hidden;
   background: #fff;
+}
+
+.task-hero-image-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  object-fit: contain;
+  object-position: top center;
 }
 
 .task-hero-visual figcaption {
@@ -2769,7 +2785,13 @@ tbody tr:last-child td {
   }
 
   .task-hero-visual {
-    width: 88%;
+    width: min(100%, 390px);
+    transform: none;
+  }
+
+  .task-hero {
+    overflow: visible;
+    clip-path: none;
   }
 
   .report-body {
